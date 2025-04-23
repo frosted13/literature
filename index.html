@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GCSE English Literature Flashcards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    select, button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 10px;
+      max-width: 500px;
+      transition: transform 0.3s;
+      cursor: pointer;
+      display: none;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .quote {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .context {
+      display: none;
+    }
+    .character {
+      font-weight: bold;
+      color: #333;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>GCSE English Lit Flashcards</h1>
+  <select id="bookSelector">
+    <option value="">Select a book</option>
+    <option value="Macbeth">Macbeth</option>
+    <option value="The Sign of the Four">The Sign of the Four</option>
+    <option value="An Inspector Calls">An Inspector Calls</option>
+  </select>
+  <div id="cardsContainer">
+    <!-- Macbeth -->
+    <div class="card"><div class="character">Macbeth</div><div class="quote">"Is this a dagger which I see before me"</div><div>Shows his hallucinations and descent into madness, indicating guilt before the murder of Duncan.</div></div>
+    <div class="card"><div class="character">Macbeth</div><div class="quote">"I am in blood stepped in so far"</div><div>Symbolises his point of no return; he's too deep in his crimes to turn back now.</div></div>
+    <div class="card"><div class="character">Macbeth</div><div class="quote">"Vaulting ambition"</div><div>He acknowledges ambition is his only motivator, which foreshadows his tragic downfall.</div></div>
+
+    <div class="card"><div class="character">Lady Macbeth</div><div class="quote">"Unsex me here"</div><div>Wants to shed her femininity to gain strength to commit murder — challenges gender norms.</div></div>
+    <div class="card"><div class="character">Lady Macbeth</div><div class="quote">"A little water clears us of this deed"</div><div>Shows her naivety thinking guilt can be washed away — ironic as she later breaks down.</div></div>
+    <div class="card"><div class="character">Lady Macbeth</div><div class="quote">"Out, damned spot!"</div><div>Her guilt manifests as hallucinations — now she cannot wash it off like she once claimed.</div></div>
+
+    <div class="card"><div class="character">Banquo</div><div class="quote">"Thou shalt get kings, though thou be none"</div><div>Witches prophesy his children will be kings, linking him to legacy and fate.</div></div>
+    <div class="card"><div class="character">Banquo</div><div class="quote">"What, can the devil speak true?"</div><div>He is suspicious of the witches, showing his cautious, moral nature.</div></div>
+    <div class="card"><div class="character">Banquo</div><div class="quote">"Fly, good Fleance, fly!"</div><div>Protects his son, shows his bravery and hope for the prophecy to be fulfilled through Fleance.</div></div>
+
+    <div class="card"><div class="character">Macduff</div><div class="quote">"O horror, horror, horror!"</div><div>His genuine grief at Duncan’s murder shows his loyalty to Scotland.</div></div>
+    <div class="card"><div class="character">Macduff</div><div class="quote">"All my pretty ones?"</div><div>Emotional reaction to the death of his family, humanises him and fuels his revenge.</div></div>
+    <div class="card"><div class="character">Macduff</div><div class="quote">"Turn, hell-hound, turn!"</div><div>He directly confronts Macbeth, calling him evil — symbol of justice and vengeance.</div></div>
+
+    <div class="card"><div class="character">The Witches</div><div class="quote">"Fair is foul, and foul is fair"</div><div>Theme of deception and inversion — reality is twisted by supernatural forces.</div></div>
+    <div class="card"><div class="character">The Witches</div><div class="quote">"None of woman born shall harm Macbeth"</div><div>Deceptive prophecy giving Macbeth false confidence.</div></div>
+    <div class="card"><div class="character">The Witches</div><div class="quote">"Double, double toil and trouble"</div><div>Witches' chant evokes chaos and sets a dark, sinister tone.</div></div>
+
+    <!-- The Sign of the Four -->
+    <div class="card"><div class="character">Sherlock Holmes</div><div class="quote">"My mind... rebels at stagnation."</div><div>Holmes thrives on mental stimulation and puzzles — shows his need for constant challenge.</div></div>
+    <div class="card"><div class="character">Sherlock Holmes</div><div class="quote">"You know my methods. Apply them."</div><div>Highlights his logical approach and confidence in his own intellect.</div></div>
+    <div class="card"><div class="character">Sherlock Holmes</div><div class="quote">"Detection is, or ought to be, an exact science"</div><div>His belief in rationality and method sets him apart from others.</div></div>
+
+    <div class="card"><div class="character">Dr. Watson</div><div class="quote">"An oasis of art in the howling desert of South London"</div><div>Watson's romantic, poetic view contrasts Holmes’ logic — shows his emotional depth.</div></div>
+    <div class="card"><div class="character">Dr. Watson</div><div class="quote">"What was I, an army surgeon with a weak leg and a weaker banking-account?"</div><div>Shows his insecurities and sense of inadequacy in contrast to Holmes.</div></div>
+    <div class="card"><div class="character">Dr. Watson</div><div class="quote">"You really are an automaton – a calculating machine"</div><div>Watson is frustrated by Holmes’ lack of empathy — reveals their different personalities.</div></div>
+
+    <div class="card"><div class="character">Mary Morstan</div><div class="quote">"A blonde young lady, small, dainty, well gloved"</div><div>Physical description reflects ideal Victorian femininity — gentle and respectable.</div></div>
+    <div class="card"><div class="character">Mary Morstan</div><div class="quote">"She must have been more than woman if she did not feel some uneasiness"</div><div>Shows her courage — though scared, she faces the mystery.</div></div>
+    <div class="card"><div class="character">Mary Morstan</div><div class="quote">"She was weak and helpless, shaken in mind and nerve"</div><div>Victorian gender expectations — her fragility contrasts the male leads.</div></div>
+
+    <div class="card"><div class="character">Jonathan Small</div><div class="quote">"A fierce, bald, bearded man"</div><div>His intimidating physical description sets him up as a villain.</div></div>
+    <div class="card"><div class="character">Jonathan Small</div><div class="quote">"It was not murder, but self-defence"</div><div>He justifies his crime, revealing moral ambiguity and desire for justice.</div></div>
+    <div class="card"><div class="character">Jonathan Small</div><div class="quote">"The treasure is gone!"</div><div>Highlights the futility of his greed — a moment of despair and loss.</div></div>
+
+    <!-- An Inspector Calls -->
+    <div class="card"><div class="character">Inspector Goole</div><div class="quote">"We are members of one body"</div><div>Communicates the central message of social responsibility and unity.</div></div>
+    <div class="card"><div class="character">Inspector Goole</div><div class="quote">"It's better to ask for the earth than to take it"</div><div>Criticises the greed and entitlement of the upper class.</div></div>
+    <div class="card"><div class="character">Inspector Goole</div><div class="quote">"Fire and blood and anguish"</div><div>Foreshadows war and destruction if social injustice continues — prophetic tone.</div></div>
+
+    <div class="card"><div class="character">Arthur Birling</div><div class="quote">"A man has to make his own way"</div><div>Represents capitalist individualism — contrasted by Inspector’s socialist message.</div></div>
+    <div class="card"><div class="character">Arthur Birling</div><div class="quote">"Unsinkable, absolutely unsinkable"</div><div>Dramatic irony undermines his authority and shows his ignorance.</div></div>
+    <div class="card"><div class="character">Arthur Birling</div><div class="quote">"The famous younger generation who know it all"</div><div>Mocks younger people, which reflects his stubbornness and outdated views.</div></div>
+
+    <div class="card"><div class="character">Sybil Birling</div><div class="quote">"Girls of that class"</div><div>Reveals her prejudice and classism — looks down on the working class.</div></div>
+    <div class="card"><div class="character">Sybil Birling</div><div class="quote">"I did nothing I'm ashamed of"</div><div>Shows her refusal to take responsibility — symbol of upper-class denial.</div></div>
+    <div class="card"><div class="character">Sybil Birling</div><div class="quote">"Go and look for the father of the child. It's his responsibility."</div><div>Irony — she's unknowingly blaming her own son, highlighting hypocrisy.</div></div>
+
+    <div class="card"><div class="character">Sheila Birling</div><div class="quote">"But these girls aren’t cheap labour – they’re people"</div><div>Shows her growing awareness and empathy — generational change.</div></div>
+    <div class="card"><div class="character">Sheila Birling</div><div class="quote">"It frightens me the way you talk"</div><div>Rejects her parents’ lack of remorse — aligns with the Inspector’s message.</div></div>
+    <div class="card"><div class="character">Sheila Birling</div><div class="quote">"I know I’m to blame – and I’m desperately sorry"</div><div>Accepts responsibility — represents hope for a more compassionate future.</div></div>
+
+    <div class="card"><div class="character">Eric Birling</div><div class="quote">"You’re not the kind of father a chap could go to"</div><div>Reveals broken family relationships and emotional isolation.</div></div>
+    <div class="card"><div class="character">Eric Birling</div><div class="quote">"I’m ashamed of you as well – yes both of you"</div><div>Condemns his parents’ attitude — generational conflict and moral maturity.</div></div>
+    <div class="card"><div class="character">Eric Birling</div><div class="quote">"The fact remains that I did what I did"</div><div>Takes responsibility unlike his parents — moral development by end of play.</div></div>
+  </div>
+
+  <script>
+    const allCards = [...document.querySelectorAll('.card')];
+    const container = document.getElementById('cardsContainer');
+
+    allCards.forEach(card => {
+      const quote = card.querySelector('.quote');
+      const context = card.querySelector('div:last-child');
+      context.classList.add('context');
+      card.addEventListener('click', () => {
+        context.style.display = context.style.display === 'none' ? 'block' : 'none';
+      });
+    });
+
+    document.getElementById('bookSelector').addEventListener('change', function () {
+      const selected = this.value;
+      container.innerHTML = '';
+      allCards.forEach(card => {
+        const book = getBook(card.querySelector('.character').textContent);
+        if (book === selected) {
+          card.style.display = 'block';
+          container.appendChild(card);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    function getBook(character) {
+      const macbethChars = ['Macbeth', 'Lady Macbeth', 'Banquo', 'Macduff', 'The Witches'];
+      const signOfFourChars = ['Sherlock Holmes', 'Dr. Watson', 'Mary Morstan', 'Jonathan Small'];
+      const inspectorCallsChars = ['Inspector Goole', 'Arthur Birling', 'Sybil Birling', 'Sheila Birling', 'Eric Birling'];
+      if (macbethChars.includes(character)) return 'Macbeth';
+      if (signOfFourChars.includes(character)) return 'The Sign of the Four';
+      if (inspectorCallsChars.includes(character)) return 'An Inspector Calls';
+      return '';
+    }
+  </script>
+
+</body>
+</html>
