@@ -1,0 +1,183 @@
+/* Basic Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Using a common, clean font */
+    max-width: 900px; /* Slightly wider for potentially longer lines/annotations */
+    margin: 2rem auto;
+    padding: 0 1.5rem; /* Increased padding */
+    line-height: 1.7; /* Increased line height for readability */
+    background-color: #f4f7f6; /* Soft background color */
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2.5rem; /* More space below title */
+    color: #1a2b3b; /* Darker, professional blue */
+    font-size: 2.5rem;
+}
+
+/* Container for Poem Cards */
+#cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Increased space between poem cards */
+}
+
+/* Individual Poem Card Styling */
+.poem-card {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc; /* Softer border */
+    border-radius: 10px; /* More rounded corners */
+    padding: 2rem; /* Increased padding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.poem-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.poem-title {
+    font-size: 1.8rem; /* Larger title */
+    font-weight: 700; /* Bolder */
+    margin-bottom: 0.4rem;
+    color: #007bff; /* Bright blue for titles */
+}
+
+.poem-author {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 1.5rem; /* More space before the summary/annotations */
+    color: #555;
+    border-bottom: 2px solid #e9ecef; /* Thicker, lighter border */
+    padding-bottom: 1rem;
+}
+
+/* Styling for the Dropdown Annotations */
+details {
+    margin-top: 1rem;
+}
+
+summary {
+    font-weight: 600; /* Semi-bold */
+    cursor: pointer;
+    outline: none;
+    padding: 0.7rem 0; /* More padding around summary text */
+    list-style: none; /* Remove default triangle */
+    color: #1a2b3b; /* Matches h1 color */
+    position: relative; /* Needed for pseudo-element positioning */
+    user-select: none; /* Prevent text selection on toggle */
+}
+
+/* Custom arrow styling */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: "▶";
+    display: inline-block;
+    margin-right: 0.8rem; /* More space between arrow and text */
+    transition: transform 0.2s ease;
+    font-size: 0.9em; /* Slightly smaller arrow */
+    color: #007bff; /* Arrow color */
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+/* Content area for annotations */
+.poem-annotations {
+    margin-top: 1rem;
+    padding: 1.5rem; /* Increased padding */
+    background-color: #eef3f7; /* Softer light blue */
+    border: 1px solid #cce5ff; /* Matching border color */
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+/* Styling for Stanzas within annotations */
+.stanza {
+    margin-bottom: 2rem; /* More space between stanzas */
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #cccccc; /* Softer dashed line */
+}
+
+.stanza:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Styling for Poem Lines within annotations */
+.poem-line {
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for poem lines */
+    margin: 0.6rem 0; /* Adjusted spacing */
+    padding: 0.4rem 0;
+    font-size: 1rem;
+    white-space: pre-wrap; /* Preserve line breaks from HTML */
+    color: #005a87; /* A distinct color for the poem lines */
+    font-weight: 500; /* Slightly heavier font weight */
+}
+
+/* Styling for the Annotation Blocks */
+.annotation {
+    margin-top: 1rem;
+    margin-left: 1.5rem; /* Increased indent */
+    padding: 1rem;
+    background-color: #ffffff; /* White background for annotation text */
+    border-left: 4px solid #007bff; /* Wider blue bar */
+    border-radius: 4px;
+    font-size: 0.95rem; /* Slightly larger annotation text */
+    color: #333;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for annotation boxes */
+}
+
+.annotation p {
+    margin: 0; /* Remove default paragraph margin within annotations */
+    padding-bottom: 0.5em; /* Add space after paragraphs within annotations */
+}
+
+.annotation p:last-child {
+    padding-bottom: 0;
+}
+
+.annotation strong {
+    color: #1a2b3b; /* Darker color for bold labels */
+    font-weight: 700; /* Bolder weight for labels */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .poem-card {
+        padding: 1.5rem;
+    }
+
+    .poem-title {
+        font-size: 1.3rem;
+    }
+
+    .poem-author {
+        font-size: 1rem;
+    }
+
+    .poem-annotations {
+        padding: 1rem;
+    }
+
+    .annotation {
+        margin-left: 1rem;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
