@@ -1,184 +1,765 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GCSE English Literature Flashcards</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-    select, button {
-      margin: 10px;
-      padding: 10px;
-      font-size: 16px;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-      margin: 10px;
-      max-width: 500px;
-      transition: transform 0.3s;
-      cursor: pointer;
-      display: none;
-    }
-    .card:hover {
-      transform: scale(1.02);
-    }
-    .quote {
-      font-style: italic;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    .context {
-      display: none;
-    }
-    .character {
-      font-weight: bold;
-      color: #333;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <h1>GCSE English Lit Flashcards</h1>
-  <select id="bookSelector">
-    <option value="">Select a book</option>
-    <option value="Macbeth">Macbeth</option>
-    <option value="The Sign of the Four">The Sign of the Four</option>
-    <option value="An Inspector Calls">An Inspector Calls</option>
-  </select>
-  <div id="cardsContainer">
-    <!-- Macbeth -->
-    <div class="card"><div class="character">Macbeth</div><div class="quote">"Is this a dagger which I see before me"</div><div>This soliloquy (Act 2, Scene 1) reveals Macbeth's psychological turmoil before killing King Duncan. The hallucinated dagger represents his guilty conscience and moral conflict. Shakespeare uses this supernatural vision to foreshadow the bloodshed to come and show Macbeth's gradual loss of sanity. The rhetorical question demonstrates his uncertainty and inner struggle between ambition and loyalty. This moment is pivotal as it's Macbeth's last chance to turn back before committing regicide - a crime considered against the natural order in Jacobean times (violating the Divine Right of Kings). The imagery of the "fatal vision" links to the play's themes of appearance vs reality and the corrupting nature of unchecked ambition.</div></div>
-    
-    <div class="card"><div class="character">Macbeth</div><div class="quote">"I am in blood stepped in so far"</div><div>This metaphorical statement (Act 3, Scene 4) represents Macbeth's point of no return. The blood imagery, recurrent throughout the play, symbolizes his guilt and the irreversible nature of his crimes. Shakespeare uses this visceral language to show Macbeth's transformation from honored soldier to tyrant. The river metaphor ("returning were as tedious as go o'er") illustrates how Macbeth feels compelled to continue his violent path rather than seek redemption. This quote demonstrates the play's exploration of how violence begets violence in a vicious cycle. It reflects Jacobean beliefs about the corrupting nature of power and shows Macbeth's awareness of his moral degradation, contrasting his earlier hesitation with his now cold-blooded approach to eliminating threats (Banquo). Worth comparing with Lady Macbeth's earlier confidence that "a little water clears us of this deed" to show how their perspectives on guilt differ.</div></div>
-    
-    <div class="card"><div class="character">Macbeth</div><div class="quote">"Vaulting ambition"</div><div>From Macbeth's soliloquy (Act 1, Scene 7), this metaphor compares his ambition to a horse rider who jumps too high and falls. Shakespeare uses this equestrian imagery to illustrate how dangerous unchecked ambition can be - a central theme of the play. This quote reveals Macbeth's self-awareness; he recognizes that ambition is his only motivation ("spur") to kill Duncan, not any genuine grievance. The adjective "vaulting" suggests overreaching and implies inevitable failure. This foreshadows his eventual downfall and connects to the play's exploration of natural order - when ambition disrupts the Great Chain of Being, chaos ensues. Shakespeare wrote this play for King James I, who had survived an assassination attempt (Gunpowder Plot), making this exploration of treasonous ambition particularly relevant to contemporary audiences. This quote can be linked to Macbeth's tragic flaw (hamartia) in Aristotelian terms.</div></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>GCSE English Literature Flashcards</title>
+  </head>
+  <body>
+    <h1>GCSE English Lit Flashcards</h1>
+    <select id="bookSelector">
+      <option value="">Select a book</option>
+      <option value="Macbeth">Macbeth</option>
+      <option value="The Sign of the Four">The Sign of the Four</option>
+      <option value="An Inspector Calls">An Inspector Calls</option>
+    </select>
+    <div id="cardsContainer">
+      <!-- Macbeth -->
+      <div class="card">
+        <div class="character">Macbeth</div>
+        <div class="quote">"Is this a dagger which I see before me"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Macbeth's hallucination of a dagger, a symbol of his
+            guilt and moral conflict before killing Duncan.
+          </p>
+          <p>
+            <strong>Context:</strong> Jacobean beliefs in the supernatural, regicide as
+            unnatural (Divine Right of Kings), foreshadows bloodshed and
+            Macbeth's madness. Explores appearance vs reality and ambition.
+          </p>
+        </div>
+      </div>
 
-    <div class="card"><div class="character">Lady Macbeth</div><div class="quote">"Unsex me here"</div><div>This powerful invocation (Act 1, Scene 5) reveals Lady Macbeth calling on spirits to remove her feminine qualities, which she perceives as weakness. The imperative "unsex me" demonstrates her determination to overcome gender constraints in pursuing power. Shakespeare subverts Jacobean gender expectations by presenting a woman who rejects feminine virtues of compassion and nurturing, instead embracing traditionally masculine traits of violence and aggression. Her desire to be filled with "direst cruelty" shows her willingness to abandon moral principles. This connects to the play's theme of the unnatural - her rejection of her natural role parallels the disruption of natural order caused by regicide. Her language ("thick my blood", "stop up th'access and passage to remorse") uses bodily imagery to show how she wants to physically transform herself. This monologue foreshadows her later breakdown - the femininity she tries to suppress eventually resurfaces through her guilt-induced madness, suggesting that denying one's true nature leads to destruction.</div></div>
-    
-    <div class="card"><div class="character">Lady Macbeth</div><div class="quote">"A little water clears us of this deed"</div><div>This statement (Act 2, Scene 2) demonstrates Lady Macbeth's initial confidence that they can simply wash away evidence and guilt of Duncan's murder. The simple, almost dismissive tone reveals her pragmatic approach to murder and her underestimation of psychological consequences. Shakespeare uses water as a symbol of purification throughout the play, but subverts this expectation through dramatic irony - audiences later see Lady Macbeth obsessively washing imaginary bloodstains, unable to cleanse her conscience. This contrast highlights the play's theme of appearance vs reality: physical cleanliness doesn't equate to moral purity. Her belief that guilt can be easily removed also reflects her underestimation of the natural order's power - in Jacobean understanding, regicide was considered so unnatural that its stain could never truly be washed away. This quote also establishes the motif of blood that runs throughout the play as a symbol of guilt, violence, and the consequences of immoral actions.</div></div>
-    
-    <div class="card"><div class="character">Lady Macbeth</div><div class="quote">"Out, damned spot!"</div><div>In this famous sleepwalking scene (Act 5, Scene 1), Lady Macbeth's earlier confidence has completely unraveled as she obsessively tries to wash imaginary blood from her hands. This hallucination represents her overwhelming guilt that manifests physically - the invisible "spot" symbolizes the indelible moral stain of murder. Shakespeare uses dramatic irony by contrasting this with her earlier claim that "a little water clears us of this deed." Her fragmented speech and repetition indicate her mental deterioration and psychological torment. The imperative "Out" shows her desperation to be free of guilt, while the adjective "damned" suggests both cursing and spiritual condemnation. This scene would particularly resonate with Jacobean audiences who believed in divine punishment for moral transgressions. Lady Macbeth's madness demonstrates the play's theme that disrupting the natural order brings severe consequences. The doctor's observation that "more needs she the divine than the physician" suggests her illness is spiritual rather than physical, beyond mortal help.</div></div>
+      <div class="card">
+        <div class="character">Macbeth</div>
+        <div class="quote">"I am in blood stepped in so far"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Macbeth acknowledges he is too deeply involved in murder
+            to turn back, symbolizing his irreversible guilt and transformation
+            into a tyrant.
+          </p>
+          <p>
+            <strong>Context:</strong> Recurrent blood imagery representing guilt, Jacobean
+            beliefs on corrupting power, theme of violence begetting violence,
+            contrasts with Lady Macbeth's initial view on guilt.
+          </p>
+        </div>
+      </div>
 
-    <div class="card"><div class="character">Banquo</div><div class="quote">"Thou shalt get kings, though thou be none"</div><div>This quote recalls the witches' prophecy to Banquo (Act 1, Scene 3) that his descendants will be kings while he will not. This prediction serves multiple dramatic purposes: it establishes the historical context (King James I claimed descent from Banquo) and creates dramatic tension by giving Macbeth a motive to murder his friend. The juxtaposition of Banquo's and Macbeth's fortunes (one gets a dynasty but no crown, the other gets the crown but no dynasty) creates a powerful contrast that explores different forms of legacy and power. Shakespeare uses this prophecy to develop the theme of fate versus free will - unlike Macbeth, Banquo hears the prophecy but doesn't actively pursue its fulfillment, showing moral restraint. The prophecy also introduces the idea of time extending beyond a single life through bloodlines, connecting to Macbeth's later anxiety about his lack of heirs. This quote becomes particularly significant when Banquo's ghost appears at the banquet, symbolizing that though Macbeth can kill the man, he cannot stop the prophecy.</div></div>
-    
-    <div class="card"><div class="character">Banquo</div><div class="quote">"What, can the devil speak true?"</div><div>This rhetorical question (Act 1, Scene 3) demonstrates Banquo's skepticism about the witches' prophecies compared to Macbeth's eager belief. Shakespeare uses Banquo as a moral counterpoint to Macbeth – both receive prophecies, but Banquo remains wary of potential deception. The reference to the devil reflects Jacobean beliefs that witches were in league with Satan, who might tell partial truths to corrupt souls. Banquo wisely recognizes that evil may "tell us truths" to "win us to our harm" – understanding that truth can be weaponized, which foreshadows how the prophecies will lead to Macbeth's downfall through their ambiguity. This quote connects to the play's themes of appearance versus reality and deception. Banquo's caution contrasts with Macbeth's immediate acceptance of the prophecies, establishing their different characters. The religious framework of the question reveals the Christian worldview underpinning the play's moral universe, where supernatural temptation tests human moral resolve.</div></div>
-    
-    <div class="card"><div class="character">Banquo</div><div class="quote">"Fly, good Fleance, fly!"</div><div>These are Banquo's final words (Act 3, Scene 3) as he's ambushed by Macbeth's hired murderers. The repetition of "fly" and the use of "good" emphasize Banquo's desperate concern for his son's survival over his own. This selfless action contrasts with Macbeth's increasing selfishness and shows Banquo's virtuous character. Shakespeare creates dramatic tension as Fleance's escape ensures the witches' prophecy about Banquo's descendants becoming kings remains possible – directly threatening Macbeth's reign. The imperative "fly" creates a sense of urgency and danger. This moment is structurally significant as it marks a turning point where Macbeth's plans begin to unravel; he can kill Banquo but not his legacy. Banquo's murder also accelerates Macbeth's transformation into a tyrant, as he now kills former friends without hesitation. The scene foreshadows future vengeance through Fleance's bloodline, connecting to the historical context of King James I's claim to be descended from Banquo, flattering Shakespeare's royal patron.</div></div>
+      <div class="card">
+        <div class="character">Macbeth</div>
+        <div class="quote">"Vaulting ambition"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Macbeth's metaphor for his dangerous, unchecked ambition
+            that will lead to his downfall.
+          </p>
+          <p>
+            <strong>Context:</strong> Central theme of the play, connects to Jacobean beliefs
+            about disrupting natural order (Great Chain of Being), relevant to
+            King James I and the Gunpowder Plot, Macbeth's tragic flaw.
+          </p>
+        </div>
+      </div>
 
-    <div class="card"><div class="character">Macduff</div><div class="quote">"O horror, horror, horror!"</div><div>This emotionally charged exclamation (Act 2, Scene 3) comes when Macduff discovers King Duncan's murdered body. The tricolon (triple repetition) of "horror" emphasizes the extremity of the crime and Macduff's genuine shock. Shakespeare uses this reaction to establish Macduff as truly loyal to Scotland and its rightful king. The inability to articulate beyond repeating "horror" suggests the murder is so unnatural it defies conventional language - reinforcing the play's theme that regicide disrupts natural order. Macduff's emotional response contrasts with Macbeth's calculated performance of shock, highlighting the difference between authentic and feigned reactions. This scene marks Macduff's emergence as an important character who will eventually become Macbeth's nemesis. In performance, this line allows actors to display raw emotion that helps establish Macduff's sincere character. The scene follows the Porter's comic relief, creating dramatic contrast that heightens the impact of this horrific discovery. Consider how this genuine reaction contrasts with Lady Macbeth's controlled performance in the same scene.</div></div>
-    
-    <div class="card"><div class="character">Macduff</div><div class="quote">"All my pretty ones?"</div><div>This devastating question comes after Macduff learns of his family's murder (Act 4, Scene 3). The diminutive "pretty ones" expresses tender affection, humanizing Macduff and making his grief palpable. Shakespeare uses this emotional moment to develop Macduff beyond a simple revenge figure, giving him personal motivation that adds moral complexity to his eventual killing of Macbeth. The question form indicates Macduff's disbelief and inability to process the horrendous news. His initial response to "dispute it like a man" by seeking revenge is countered by Malcolm's wise observation that he must also "feel it as a man" - suggesting true masculinity includes emotional honesty, not just violent action. This scene creates powerful dramatic irony as the audience witnessed the murder scene that Macduff is just learning about. Structurally, this moment solidifies Macduff as Macbeth's righteous opponent and transforms the political conflict into a deeply personal vendetta. The murder of innocents also demonstrates how far Macbeth has fallen morally, killing women and children without provocation.</div></div>
-    
-    <div class="card"><div class="character">Macduff</div><div class="quote">"Turn, hell-hound, turn!"</div><div>This forceful command (Act 5, Scene 8) comes during the climactic final battle between Macduff and Macbeth. The bestial metaphor "hell-hound" dehumanizes Macbeth, suggesting he has transformed from man to monster through his crimes. The term has supernatural connotations, linking Macbeth to demonic forces and reinforcing the play's theme of disrupted natural order. Shakespeare's repeated use of "turn" creates urgency and frames this as a moment of reckoning where Macbeth must face the consequences of his actions. This confrontation fulfills the witches' equivocal prophecy that "none of woman born shall harm Macbeth" - Macduff reveals he was "from his mother's womb untimely ripped" (born by cesarean section). This scene represents the restoration of moral order through justified violence, contrasting with Macbeth's illegitimate murders. The language is deliberately theatrical, emphasizing the scene's function as the play's climactic moment of catharsis. Macduff's personal vendetta (his family's murder) merges with national interest (removing a tyrant), creating a morally justified resolution.</div></div>
+      <div class="card">
+        <div class="character">Lady Macbeth</div>
+        <div class="quote">"Unsex me here"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Lady Macbeth invokes spirits to remove her feminine
+            qualities, which she sees as hindering her ambition and capacity for
+            cruelty.
+          </p>
+          <p>
+            <strong>Context:</strong> Challenges Jacobean gender expectations, theme of the
+            unnatural, foreshadows her later mental breakdown.
+          </p>
+        </div>
+      </div>
 
-    <div class="card"><div class="character">The Witches</div><div class="quote">"Fair is foul, and foul is fair"</div><div>This paradoxical statement (Act 1, Scene 1) establishes the witches' moral inversion and sets the play's unsettling tone. The chiasmus (reversed parallel structure) linguistically enacts the confusion between good and evil that will plague Macbeth's world. Shakespeare uses this line to introduce the play's central theme of deceptive appearances - what seems good may be evil and vice versa. The witches' supernatural perspective transcends human moral boundaries, suggesting a chaotic universe where normal ethical rules don't apply. This line connects to Macbeth's first words in the play, "So foul and fair a day I have not seen," creating an eerie linguistic link between him and the witches before they've even met. For Jacobean audiences who believed in witchcraft, this moral inversion would signify Satanic influence (the devil was believed to invert Christian values). The line also foreshadows how Macbeth's victories (fair) will lead to moral corruption (foul), and how his initial triumphs will ultimately lead to his downfall. The meter is trochaic rather than iambic, distinguishing the witches' speech from human characters.</div></div>
-    
-    <div class="card"><div class="character">The Witches</div><div class="quote">"None of woman born shall harm Macbeth"</div><div>This deceptively reassuring prophecy (Act 4, Scene 1) gives Macbeth false confidence in his invincibility while concealing a crucial loophole. Shakespeare uses equivocation (deliberately ambiguous language) to demonstrate how half-truths can be more dangerous than lies. The prophecy exemplifies the play's exploration of fate versus free will - Macbeth interprets it as making him invulnerable, but it actually foreshadows his specific doom (death by Macduff, who was born by cesarean section). This relates to contemporary events - the Jesuit priest Henry Garnet had recently published a treatise defending equivocation in certain circumstances, making this wordplay politically charged for Jacobean audiences. The witches exploit language to manipulate rather than inform, connecting to the play's theme of deception. Structurally, this prophecy creates dramatic irony - the audience eventually understands the true meaning before Macbeth does, building tension toward their final confrontation. It also demonstrates Macbeth's dangerous overconfidence and willingness to trust supernatural forces over human relationships.</div></div>
-    
-    <div class="card"><div class="character">The Witches</div><div class="quote">"Double, double toil and trouble"</div><div>This incantation from the cauldron scene (Act 4, Scene 1) employs rhythm, rhyme and repetition to create a hypnotic, ritualistic quality. The trochaic tetrameter ("DOUble DOUble") creates an unnatural rhythmic inversion of Shakespeare's usual iambic pentameter, linguistically marking the witches as outside normal human society. The brewing of the potion symbolizes how multiple evil elements combine to create greater chaos, paralleling how various characters' corrupt actions create the tragedy. Shakespeare includes grotesque ingredients ("eye of newt," "liver of blaspheming Jew") that would horrify and fascinate Jacobean audiences who feared witchcraft. The word "trouble" foreshadows the suffering their prophecies will cause, while "toil" suggests laborious effort - showing that evil requires work and intention. This scene occurs at the play's midpoint, intensifying the supernatural elements as Macbeth becomes more desperate. The cauldron itself serves as a visual metaphor for the bubbling, volatile situation in Scotland. King James I had personal interest in witchcraft and wrote "Daemonologie," making these scenes particularly relevant to Shakespeare's royal patron.</div></div>
+      <div class="card">
+        <div class="character">Lady Macbeth</div>
+        <div class="quote">"A little water clears us of this deed"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Lady Macbeth's initial belief that they can easily wash
+            away the physical evidence and guilt of Duncan's murder.
+          </p>
+          <p>
+            <strong>Context:</strong> Dramatic irony (contrasts with her later hand-washing),
+            symbolism of water and blood, theme of appearance vs reality,
+            underestimation of psychological consequences and disruption of
+            natural order.
+          </p>
+        </div>
+      </div>
 
-    <!-- The Sign of the Four -->
-    <div class="card"><div class="character">Sherlock Holmes</div><div class="quote">"My mind... rebels at stagnation."</div><div>This statement (Chapter 1) reveals Holmes's intellectual restlessness and psychological needs. Conan Doyle uses this line to establish Holmes's complex character - his brilliant mind requires constant stimulation, leading to his cocaine use when not engaged in detective work. The verb "rebels" personifies his mind as having its own autonomous will, suggesting he's somewhat at the mercy of his exceptional intellect. This inner conflict makes Holmes more human despite his seemingly superhuman deductive abilities. The quote illustrates late-Victorian anxieties about degeneration - even great minds could deteriorate without proper application. This insight into Holmes's psychology helps explain his dedication to solving puzzles that others find trivial. His aversion to "stagnation" connects to the wider Victorian value of industriousness and productivity. The statement also functions narratively, establishing his need for the case that Watson is about to bring him. Holmes represents the scientific rationalism of the late 19th century, valuing mental activity and logical reasoning over emotional connections.</div></div>
-    
-    <div class="card"><div class="character">Sherlock Holmes</div><div class="quote">"You know my methods. Apply them."</div><div>This directive to Watson (Chapter 6) demonstrates Holmes's role as a teacher and his desire to elevate his companion's deductive skills. The imperative tone reveals Holmes's confidence in his methodical approach to investigation and his expectation that these methods can be taught and replicated. Conan Doyle uses this moment to highlight the scientific basis of Holmes's detective work - observation, deduction, and logical reasoning rather than intuition or luck. This educational relationship between Holmes and Watson reflects Victorian values of self-improvement and intellectual development. The quote also serves a narrative function, allowing readers to test their own deductive skills alongside Watson. Holmes's methods emphasize empirical evidence over superstition or emotion, embodying late Victorian scientific rationalism against earlier Gothic supernaturalism. This pedagogical aspect of their relationship creates tension between Holmes's expertise and Watson's more average abilities, making Holmes's eventual revelation of facts more impressive. Holmes's willingness to teach Watson also reveals a rarely seen generosity of spirit beneath his usually detached exterior.</div></div>
-    
-    <div class="card"><div class="character">Sherlock Holmes</div><div class="quote">"Detection is, or ought to be, an exact science"</div><div>This declaration (Chapter 1) encapsulates Holmes's philosophy and the novel's central theme: the application of scientific methodology to crime-solving. The phrase "ought to be" reveals Holmes's reforming mindset - he seeks to transform detective work from guesswork to precision. Conan Doyle, himself a physician, uses Holmes to champion the emerging Victorian faith in scientific progress and rational inquiry. The term "exact science" connects Holmes's work to respected fields like chemistry and physics, elevating detection from mere police work to intellectual discipline. This scientific approach contrasts with the exotic, mysterious elements of the case (Indian treasure, Andaman islander), showing Western rationality confronting colonial "otherness." Holmes's methodical approach reflects the positivist philosophy popular in the late 19th century - the belief that all true knowledge comes from verifiable observation rather than intuition or speculation. The statement also distinguishes Holmes from earlier literary detectives who relied more on luck or personal connections. For exam purposes, consider how this philosophy sometimes blinds Holmes to emotional or irrational human motivations that don't fit his scientific worldview.</div></div>
+      <div class="card">
+        <div class="character">Lady Macbeth</div>
+        <div class="quote">"Out, damned spot!"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Lady Macbeth's desperate hallucination during sleepwalking,
+            trying to wash away imaginary bloodstains, symbolizing her overwhelming
+            guilt.
+          </p>
+          <p>
+            <strong>Context:</strong> Contrasts with her earlier confidence ("a little water
+            clears us"), shows her mental deterioration, links to Jacobean
+            beliefs in divine punishment, demonstrates consequences of disrupting
+            natural order.
+          </p>
+        </div>
+      </div>
 
-    <div class="card"><div class="character">Dr. Watson</div><div class="quote">"An oasis of art in the howling desert of South London"</div><div>This poetic description of Pondicherry Lodge (Chapter 5) demonstrates Watson's romantic literary style that contrasts with Holmes's clinical precision. Conan Doyle uses this figurative language to establish Watson not just as Holmes's assistant but as a man of culture and imagination. The desert metaphor characterizes South London as barren and inhospitable, reflecting Victorian middle-class attitudes toward working-class areas. This orientalist imagery (oasis/desert) parallels the novel's exotic elements and colonial connections to India, contributing to the adventure story aspects of the narrative. Watson's impressionistic descriptions complement Holmes's precise observations, creating a balanced narrative perspective. This romantic language also appeals to the Victorian appetite for picturesque contrasts. Watson's function as narrator requires these more elaborate descriptions to engage readers emotionally, while Holmes provides intellectual engagement. The quote reveals how Watson transforms ordinary environments through his perception, suggesting his value isn't just as Holmes's assistant but as an interpreter who makes Holmes's work accessible and engaging to readers through his more conventional worldview.</div></div>
-    
-    <div class="card"><div class="character">Dr. Watson</div><div class="quote">"What was I, an army surgeon with a weak leg and a weaker banking-account?"</div><div>This self-deprecating rhetorical question (Chapter 11) reveals Watson's insecurities as he contemplates proposing to Mary Morstan. Conan Doyle uses this vulnerable moment to humanize Watson and add romantic tension to the detective plot. The parallel structure comparing his "weak leg" (from military service in Afghanistan) to his "weaker banking-account" employs both physical and financial inadequacy to emphasize his perceived unworthiness. This quote explores Victorian masculine identity, which was strongly tied to physical capability and financial provision. Watson's military background connects him to British imperial expansion, while his injury symbolizes the personal cost of empire. His concern about financial stability reflects Victorian social expectations for marriage, where men were expected to be providers. The question reveals Watson's moral character - he won't propose while Mary might inherit wealth, to avoid appearing mercenary. This demonstrates his adherence to Victorian gentlemanly values of honor and propriety. The self-doubt humanizes Watson compared to Holmes's confident rationality, making him more relatable to readers while maintaining the novel's exploration of different models of masculinity.</div></div>
-    
-    <div class="card"><div class="character">Dr. Watson</div><div class="quote">"You really are an automaton – a calculating machine"</div><div>This criticism (Chapter 10) represents Watson's frustration with Holmes's apparent lack of emotion regarding Mary Morstan. Conan Doyle uses this moment to highlight the fundamental difference between the two men's worldviews. The mechanical metaphor ("automaton," "calculating machine") dehumanizes Holmes, suggesting his logical approach lacks essential human qualities like empathy. This contrast between Watson's emotional romanticism and Holmes's cold rationality creates the central character dynamic of the series. The accusation reflects Victorian anxieties about industrialization and mechanization threatening human connection. However, Holmes's response that emotion would cloud his judgment reveals his practical philosophy - detachment is necessary for objective analysis. This exchange explores different models of masculinity in Victorian society: Watson's conventional emotional sensitivity versus Holmes's scientific detachment. The criticism also serves narrative purposes, allowing Holmes to articulate his methodological approach while hinting at deeper emotional suppression rather than absence. For exams, this quote can be analyzed to show how Watson functions as both a foil to Holmes and as a bridge between Holmes's exceptional mind and the reader's more conventional perspective.</div></div>
+      <div class="card">
+        <div class="character">Banquo</div>
+        <div class="quote">"Thou shalt get kings, though thou be none"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> The witches' prophecy to Banquo that his descendants will
+            be kings, while he won't be.
+          </p>
+          <p>
+            <strong>Context:</strong> Establishes historical link to King James I, creates
+            Macbeth's motive for murder, explores fate vs free will (Banquo's
+            restraint contrasts with Macbeth), introduces idea of legacy through
+            bloodlines.
+          </p>
+        </div>
+      </div>
 
-    <div class="card"><div class="character">Mary Morstan</div><div class="quote">"A blonde young lady, small, dainty, well gloved"</div><div>This physical description from Watson's first impression (Chapter 2) establishes Mary as the embodiment of Victorian feminine ideals. Conan Doyle uses this portrayal to create both a conventional love interest and a contrast to the novel's exotic and threatening elements. The emphasis on her being "well gloved" highlights Victorian concerns with propriety and respectability - proper ladies remained covered and modest. The adjectives "small" and "dainty" reflect Victorian aesthetic preferences for delicate femininity, contrasting with the masculine world of detection and adventure. Mary's blonde coloring creates a visual contrast with the dark-skinned Tonga, playing into Victorian racial typology that associated fair features with moral purity. Despite fitting physical ideals, Mary shows character depth through her self-possession and intelligence. Her physical description establishes her social position as a genteel but impoverished governess, a common Victorian literary figure embodying the precarious status of unmarried middle-class women. For exams, analyze how Mary's conventional English femininity represents the domestic values that both ground and contrast with the novel's imperial adventures, embodying what British men supposedly fought to protect.</div></div>
-    
-    <div class="card"><div class="character">Mary Morstan</div><div class="quote">"She must have been more than woman if she did not feel some uneasiness"</div><div>This narratorial observation from Watson (Chapter 4) acknowledges Mary's courage while reinforcing Victorian gender expectations. Conan Doyle uses this statement to create tension while maintaining Mary's femininity – she can show bravery without transgressing proper gender boundaries. The phrase "more than woman" suggests that complete fearlessness would make her unwomanly, reflecting Victorian beliefs that sensitivity and nervousness were inherently feminine traits. This quote demonstrates the novel's complex gender politics – Mary can participate in adventure but must maintain conventional feminine reactions. Her "uneasiness" makes her relatable and human rather than unrealistically heroic. The observation comes as they approach Pondicherry Lodge at night, entering the dangerous, masculine realm of criminal investigation. Watson's admiring tone reveals his growing attraction to Mary, who balances proper femininity with sufficient courage for the narrative's requirements. For exams, consider how this portrayal of controlled female fear creates a middle ground between the swooning heroines of Gothic fiction and the emerging "New Woman" of the 1890s who challenged gender constraints. Mary's character negotiates Victorian gender ideals while allowing her enough agency to participate in the mystery.</div></div>
-    
-    <div class="card"><div class="character">Mary Morstan</div><div class="quote">"She was weak and helpless, shaken in mind and nerve"</div><div>This description of Mary's reaction to the treasure's disappearance (Chapter 11) reinforces Victorian gender conventions while revealing her moral character. Conan Doyle uses this moment of "weakness" to demonstrate Mary's superiority of character – she's less concerned with the lost fortune than with Thaddeus Sholto's welfare. The terms "weak," "helpless," and "shaken" conform to Victorian expectations of feminine fragility, particularly under stress. However, this conventional response enables a morally significant moment – Watson realizes she isn't mercenary, making him feel free to propose. Mary's distress paradoxically reveals her strength of character and proper prioritization of human welfare over material gain. This moment reflects Victorian class values – true gentility comes from moral character rather than mere wealth. The description creates dramatic tension by showing the physical impact of the case on a feminine participant, emphasizing the dangerous nature of criminal investigation. For exams, analyze how this apparent weakness functions narratively to develop the romance subplot while reinforcing Victorian gender ideals that women required male protection. The physical response validates Watson's protective masculinity while Mary's moral response elevates her as worthy of his affection.</div></div>
+      <div class="card">
+        <div class="character">Banquo</div>
+        <div class="quote">"What, can the devil speak true?"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Banquo's skeptical reaction to the witches' prophecies,
+            questioning if evil forces can tell the truth.
+          </p>
+          <p>
+            <strong>Context:</strong> Banquo as a moral foil to Macbeth, reflects Jacobean
+            beliefs about witches and Satanic influence, theme of deception and
+            ambiguous truth, foreshadows how prophecies lead to harm.
+          </p>
+        </div>
+      </div>
 
-    <div class="card"><div class="character">Jonathan Small</div><div class="quote">"A fierce, bald, bearded man"</div><div>This description of Small's first appearance (Chapter 10) establishes his dangerous physicality through visual contrasts with the refined Holmes and Watson. Conan Doyle uses these harsh descriptors to mark Small as working-class and potentially threatening – his fierce appearance matching his criminal actions. The adjective "fierce" suggests an animal-like quality, while "bald" and "bearded" create a distinctive visual image that contrasts with Victorian gentlemanly appearance norms. Small's appearance represents the convergence of multiple Victorian anxieties – the dangerous working class, the morally corrupted colonial returnee, and the physically disabled (his wooden leg). His subsequent capture demonstrates Holmes's triumph of intellect over brute force. Small's distinctive appearance connects to the Victorian practice of physiognomy – the belief that physical features indicated moral character. His missing leg symbolizes the physical cost of imperial service, parallel to Watson's injury but without the doctor's moral rectitude. For exams, analyze how Small's threatening appearance establishes him as an antagonist while his subsequent testimony complicates this initial impression, creating moral ambiguity that challenges simple categorization of characters as purely good or evil.</div></div>
-    
-    <div class="card"><div class="character">Jonathan Small</div><div class="quote">"It was not murder, but self-defence"</div><div>This justification (Chapter 12) reveals Small's complex moral position as both criminal and victim of circumstance. Conan Doyle uses Small's extended confession to transform him from simple villain to a morally ambiguous figure shaped by colonial exploitation. The claim of self-defense represents Small's attempt to maintain moral dignity despite his crimes – he distinguishes between murder (killing for gain) and killing to protect the treasure he considers rightfully his through the pact of four. This defense reveals Victorian legal and moral distinctions between premeditated murder and killing under provocation. Small's narrative presents colonial India as a morally compromising environment where normal English rules don't apply, reflecting anxieties about imperial service corrupting British character. His justification challenges the novel's earlier moral certainties and introduces class critique – Small turned to crime partly due to limited opportunities as a working-class man. For exams, analyze how Small's perspective introduces moral relativism into the detective story format, which typically affirms clear distinctions between right and wrong. His testimony forces readers to consider how circumstances shape morality and questions whether British justice adequately accounts for colonial contexts.</div></div>
-    
-<div class="card"><div class="character">Jonathan Small</div><div class="quote">"The treasure is gone!"</div><div>This exclamation of despair (Chapter 12) marks the climactic moment when Small reveals he discarded the Agra treasure in the Thames. Conan Doyle uses this twist to subvert the conventional adventure story ending and emphasize moral themes over material rewards. The brevity and exclamation convey Small's bitter satisfaction in denying others what he couldn't possess himself. This moment represents the futility of greed – the treasure that motivated kidnapping, murder, and decades-long pursuit ends up worthless at the bottom of London's river. Small's action transforms the treasure from physical wealth to symbolic corruption – it has morally tainted everyone who sought it. The Thames, symbol of London and British commerce, ironically becomes the final resting place for colonial plunder, suggesting the morally compromised foundations of imperial wealth. The lost treasure allows the Watson-Mary romance to develop on purely emotional rather than financial grounds. For exams, analyze how this twist serves multiple narrative functions: it punishes greed, returns focus to the detection process rather than its reward, frees the romance plot from mercenary implications, and provides ironic closure to the imperial adventure subplot. The treasure's disappearance reflects Victorian moral sensibilities where virtue ultimately matters more than wealth.</div></div>
-    <!-- An Inspector Calls -->
-    <div class="card"><div class="character">Inspector Goole</div><div class="quote">"We are members of one body"</div><div>This crucial statement (Act 3) encapsulates the play's core socialist message about collective responsibility. Priestley uses this metaphor of society as a single organism to challenge the individualist ethos represented by Mr. Birling. The Inspector's use of "we" is inclusive, breaking down class barriers by suggesting all humans are interconnected regardless of social position. This philosophy directly opposes capitalist competition, where success often comes at others' expense. Written in 1945 but set in 1912, this line anticipates the post-war welfare state and NHS – institutions founded on similar principles of shared responsibility. The body metaphor suggests that harm to one part (Eva Smith) inevitably affects the whole, making her suicide everyone's concern. As the moral center of the play, Goole functions as Priestley's mouthpiece, delivering socialist ideas through this accessible metaphor. For exams, connect this quote to contextual factors including the 1945 Labour government's reforms and public desire for a more equal society after WWII. This line gains additional power coming after the family's individual guilt has been established, offering an alternative social model that might have prevented the tragedy.</div></div>
-    
-    <div class="card"><div class="character">Inspector Goole</div><div class="quote">"It's better to ask for the earth than to take it"</div><div>This statement (Act 2) defends workers' rights to strike for better conditions while critiquing capitalist exploitation. Priestley uses this aphorism to counter Mr. Birling's earlier dismissal of strikers as troublemakers. The metaphor of "asking for the earth" versus "taking it" contrasts legitimate labor demands with the unethical profiteering of business owners who "take" without asking. This supports Eva Smith's striking for higher wages – she "asked" through proper channels rather than stealing. The Inspector validates collective action as morally superior to exploitation, reflecting Priestley's socialist sympathies. Written after WWII when labor rights were strengthening, this line challenges pre-war class assumptions. The poetic, memorable phrasing makes this moral lesson accessible to audiences. The Inspector's wisdom emerges through these concise statements that distill complex social issues into clear ethical principles. For exams, connect this quote to historical context: growing union power in the 1940s, the Labour victory of 1945, and changing attitudes toward workers' rights. The statement also contrasts the direct, plain-speaking Inspector with the euphemistic language the Birlings use to minimize their actions.</div></div>
-    
-    <div class="card"><div class="character">Inspector Goole</div><div class="quote">"Fire and blood and anguish"</div><div>This ominous prophecy concludes the Inspector's final speech (Act 3), warning of violent consequences if society doesn't embrace collective responsibility. Priestley uses biblical, apocalyptic language to elevate the moral message from individual guilt to universal significance. The tricolon (three-part structure) creates rhythmic emphasis, while the repeated conjunction "and" builds intensity. Written in 1945, this line carries dramatic irony for audiences who had just experienced two world wars – conflicts Priestley suggests resulted partly from the selfish individualism the Birlings represent. The "fire" evokes both warfare and hell, suggesting both worldly and spiritual punishment. As the Inspector's final words before his dramatic exit, this warning functions as the play's climax, making his moral message unavoidable. The apocalyptic tone transforms Eva Smith's individual tragedy into a warning about society's future. For exams, analyze how this line gains power through contextual awareness – 1912 audiences would soon face WWI, while 1945 audiences had just survived WWII. The prophecy also creates structural tension leading into the play's final revelation about the Inspector's identity and a real suicide, suggesting the cycle of consequences has already begun anew.</div></div>
+      <div class="card">
+        <div class="character">Banquo</div>
+        <div class="quote">"Fly, good Fleance, fly!"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Banquo's final words urging his son Fleance to escape the
+            murderers.
+          </p>
+          <p>
+            <strong>Context:</strong> Shows Banquo's selfless character, creates dramatic
+            tension (Fleance's escape keeps prophecy alive), marks a turning point
+            in Macbeth's plans, foreshadows future vengeance, flatters King James
+            I's lineage.
+          </p>
+        </div>
+      </div>
 
-    <div class="card"><div class="character">Arthur Birling</div><div class="quote">"A man has to make his own way"</div><div>This declaration (Act 1) establishes Birling as the embodiment of capitalist individualism that the play critiques. Priestley uses this statement to introduce the selfish philosophy that will be systematically dismantled through the Inspector's investigation. The gendered phrasing ("a man") reveals Birling's patriarchal worldview, suggesting successful individualism is specifically male. This competitive philosophy directly contradicts the Inspector's later assertion that "we are members of one body," creating the play's central ideological conflict. Birling's advice to Gerald and Eric represents the passing down of harmful values between generations and classes. Set in 1912 but written in 1945, this individualist attitude represents the pre-war mentality that Priestley suggests led to social inequality and eventually conflict. For exams, analyze how Birling's capitalist rhetoric specifically references real historical figures ("hard-headed business man like myself" compared to Sir George Croft or Lord Ravenscroft) to establish his aspirational snobbery. Emphasize how his philosophy of self-interest directly contributed to Eva Smith's exploitation and ultimate suicide, as he prioritized profit margins over workers' basic needs.</div></div>
-    
-    <div class="card"><div class="character">Arthur Birling</div><div class="quote">"Unsinkable, absolutely unsinkable"</div><div>This confident assertion about the Titanic (Act 1) creates dramatic irony that undermines Birling's credibility before the Inspector arrives. Priestley places this statement early in the play to establish Birling's fundamental foolishness and shortsightedness through a historical reference audiences would immediately recognize. The emphatic adverb "absolutely" intensifies the irony, showing Birling's complete confidence in his incorrect judgments. Beyond the specific Titanic reference, this quote represents Birling's broader inability to see potential dangers or anticipate consequences. Dramatically, this error prepares audiences to question Birling's other confident pronouncements about war being impossible and labor relations. For exams, analyze how Priestley uses dramatic irony as a structural device – 1912 characters don't know the Titanic will sink, but both Priestley (writing in 1945) and his audiences do. This creates immediate distance between audience and character, encouraging critical evaluation of Birling rather than identification with him. The Titanic itself functions symbolically – like Birling's reputation and social order, it appears solid but proves catastrophically vulnerable.</div></div>
-    
-    <div class="card"><div class="character">Arthur Birling</div><div class="quote">"The famous younger generation who know it all"</div><div>This sarcastic remark (Act 1) reveals Birling's dismissive attitude toward youth and social change. Priestley uses this generational conflict to represent broader tensions between outdated Victorian values and emerging progressive attitudes. The adjective "famous" carries condescending irony, suggesting Birling sees youth idealism as a passing fad rather than valid criticism. This intergenerational tension foreshadows the later revelation that his son Eric was involved with Eva Smith, showing how parental dismissiveness creates communication barriers within families. For 1945 audiences rebuilding after WWII, this line would resonate with real tensions between older conservative attitudes and younger generations seeking social change. Structurally, this early conflict between Birling and the younger characters (particularly Sheila) establishes the pattern of resistance and eventual acceptance that drives the play's moral development. For exams, analyze how Priestley uses generation gaps to explore changing social attitudes, with older characters representing outdated values while younger characters (particularly Sheila) show capacity for moral growth and learning. This quote reveals Birling's fundamental resistance to change, progress, and self-reflection – character flaws that prevent his moral development even after the Inspector's revelations.</div></div>
+      <div class="card">
+        <div class="character">Macduff</div>
+        <div class="quote">"O horror, horror, horror!"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Macduff's raw, emotional reaction upon discovering King
+            Duncan's murdered body.
+          </p>
+          <p>
+            <strong>Context:</strong> Establishes Macduff's loyalty and genuine shock,
+            reinforces theme of regicide disrupting natural order, contrasts with
+            Macbeth's feigned reactions, marks Macduff as Macbeth's future
+            nemesis.
+          </p>
+        </div>
+      </div>
 
-    <div class="card"><div class="character">Sybil Birling</div><div class="quote">"Girls of that class"</div><div>This dismissive phrase (Act 2) reveals Mrs. Birling's entrenched classism and lack of empathy toward working-class women like Eva Smith. Priestley uses this dehumanizing language to show how class prejudice enables moral disengagement – by categorizing Eva as fundamentally "other," Mrs. Birling justifies denying her charity. The demonstrative "that" creates linguistic distance, positioning working-class women as a remote category rather than individuals deserving compassion. As committee chairwoman of the Brumley Women's Charity Organization, her prejudice carries institutional power, representing how establishment structures maintain inequality. Her class prejudice blinds her to her own son's involvement, creating dramatic irony as she unwittingly condemns Eric. For exams, analyze how this quote reveals the intersection of class and gender hierarchies in Edwardian society – Mrs. Birling judges Eva not just for being working-class but specifically for being a working-class woman who violated sexual propriety by becoming pregnant outside marriage. Compare this with her different standard for Gerald's affair, showing her moral hypocrisy. This phrase exemplifies the dehumanizing language that enables exploitation, connecting to Priestley's socialist critique of class-based society.</div></div>
-    
-    <div class="card"><div class="character">Sybil Birling</div><div class="quote">"I did nothing I'm ashamed of"</div><div>This defiant statement (Act 2) demonstrates Mrs. Birling's refusal to accept responsibility for her role in Eva Smith's suicide. Priestley uses her unapologetic attitude to represent the moral blindness of the privileged upper classes. The emphatic negative "nothing" reveals her complete lack of self-awareness or ethical reflection. As the last family member to be interrogated before Eric, her stubborn resistance represents the height of moral obstinacy before the final revelations. Her claim contrasts sharply with Sheila's earlier acceptance of responsibility, highlighting the generational divide in moral responsiveness. Mrs. Birling's social position as a prominent charity worker adds hypocrisy to her lack of remorse – she performs public compassion while privately withholding it. For exams, analyze how her refusal to acknowledge wrongdoing represents the entrenched power structures that resist social change. Her defense rests on following institutional procedures ("I did my duty"), showing how systems can enable harm while providing moral alibis. Unlike younger characters who demonstrate capacity for growth, Mrs. Birling maintains her righteous self-image despite evidence of her cruelty, embodying the rigid class attitudes Priestley critiques.</div></div>
-    
-    <div class="card"><div class="character">Sybil Birling</div><div class="quote">"Go and look for the father of the child. It's his responsibility."</div><div>This unintentionally ironic statement (Act 2) occurs as Mrs. Birling unwittingly condemns her own son while describing her treatment of Eva Smith at the charity committee. Priestley creates dramatic tension through this irony – the audience realizes before Mrs. Birling that Eric is the father she's demanding be held accountable. Her emphasis on paternal responsibility ("his responsibility") undercuts her own denial of responsibility for Eva's situation. This moment represents the intersection of public morality and private hypocrisy – Mrs. Birling applied harsh moral standards to others that she'll soon have to confront within her own family. For exams, analyze how this statement intensifies the play's critique of upper-class moral hypocrisy – Mrs. Birling demands accountability from a man she assumes is working-class while protecting her own family from consequences. Priestley uses dramatic irony to create both tension and satisfaction – audiences anticipate the revelation that will force Mrs. Birling to face her contradictory standards. This quote structurally bridges the interrogations of Mrs. Birling and Eric, making her moral condemnation boomerang back on her family and forcing her to confront the consequences of her harsh judgment.</div></div>
+      <div class="card">
+        <div class="character">Macduff</div>
+        <div class="quote">"All my pretty ones?"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Macduff's heartbroken question upon learning of his
+            family's murder.
+          </p>
+          <p>
+            <strong>Context:</strong> Humanizes Macduff and provides personal motivation for
+            revenge, explores different aspects of masculinity (feeling vs acting),
+            creates dramatic irony (audience saw the murder), solidifies Macduff
+            as Macbeth's opponent, shows Macbeth's moral depth of depravity.
+          </p>
+        </div>
+      </div>
 
-    <div class="card"><div class="character">Sheila Birling</div><div class="quote">"But these girls aren't cheap labour – they're people"</div><div>This assertion (Act 1) demonstrates Sheila's growing social conscience as she challenges her father's dehumanizing view of workers. Priestley uses this moment to establish Sheila as morally educable, unlike her more rigid parents. The statement directly humanizes workers by emphasizing "they're people," countering capitalist reduction of employees to "cheap labour." Her use of "these girls" rather than "girls of that class" (as her mother would say) shows greater recognition of working women as individuals. This moral awakening comes after acknowledging her role in Eva's firing from Milwards, showing how personal responsibility leads to broader social awareness. For exams, analyze how Sheila's developing conscience represents hope for younger generations to reject inherited class prejudices. This quote directly challenges her father's capitalist philosophy established earlier in the same act. Though still early in her moral journey, this moment marks Sheila's first articulation of the social responsibility the Inspector promotes. The statement also shows generational differences in attitudes toward class and labor – Sheila has potential for progressive thinking while her father remains entrenched in exploitative Victorian capitalism.</div></div>
-    
-    <div class="card"><div class="character">Sheila Birling</div><div class="quote">"It frightens me the way you talk"</div><div>This reaction to her parents' denial (Act 3) shows Sheila's moral growth and her rejection of their self-serving rationalizations. Priestley uses her emotional response ("frightens me") to emphasize the serious ethical implications of her parents' attitudes. Unlike her parents, who revert to comfortable denial once the Inspector leaves, Sheila remains transformed by the experience. Her fear indicates genuine moral concern rather than simply social embarrassment. This statement establishes the generational divide that structures the play's conclusion – younger characters (Sheila and Eric) accept responsibility while older characters retreat into denial. For exams, analyze how this quote represents Sheila's completed moral journey from privileged thoughtlessness to genuine social conscience. The verb "frightens" suggests ethical horror at her parents' callousness, showing how thoroughly her values have changed. This moment also emphasizes Priestley's message that moral responsibility is a choice – Sheila chooses continued acknowledgment of harm over comfortable denial. Her fear isn't just for Eva Smith but recognition that such attitudes could lead to broader social catastrophe, connecting to the Inspector's warning about "fire and blood and anguish."</div></div>
-    
-    <div class="card"><div class="character">Sheila Birling</div><div class="quote">"I know I'm to blame – and I'm desperately sorry"</div><div>This admission of responsibility (Act 1) establishes Sheila as capable of moral growth, contrasting with her parents' later denials. Priestley presents her acknowledgment of wrongdoing as a necessary first step toward genuine change. The emphatic "I know" shows self-awareness, while "desperately sorry" indicates genuine remorse rather than mere social embarrassment. This early acceptance of culpability makes Sheila the first family member to respond appropriately to the Inspector's revelations. Her willingness to face uncomfortable truths sets her apart from her parents, who prioritize reputation over moral reflection. For exams, analyze how this quote marks the beginning of Sheila's transformation from spoiled child to morally conscious adult. Her language lacks the euphemisms and deflections others use – she directly names her fault as "blame" rather than minimizing it. This statement comes after learning how her jealous spite cost Eva her job at Milwards, showing how privilege enables casual cruelty with serious consequences. Structurally, Sheila's rapid acceptance of responsibility raises expectations for other characters' responses, making their denials and evasions more clearly inadequate by comparison.</div></div>
+      <div class="card">
+        <div class="character">Macduff</div>
+        <div class="quote">"Turn, hell-hound, turn!"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Macduff's forceful challenge to Macbeth during their
+            final battle.
+          </p>
+          <p>
+            <strong>Context:</strong> Bestial metaphor dehumanizes Macbeth, links him to evil,
+            fulfills the witches' equivocal prophecy (Macduff was not "of woman
+            born" in conventional sense), represents restoration of moral order,
+            climactic moment of catharsis.
+          </p>
+        </div>
+      </div>
 
-    <div class="card"><div class="character">Eric Birling</div><div class="quote">"You're not the kind of father a chap could go to"</div><div>This accusation (Act 3) reveals the dysfunctional family dynamics beneath the Birlings' respectable facade. Priestley uses this painful statement to show how social performance of propriety often masks private failures of connection and care. The formal distancing language ("a chap" rather than "I") suggests Eric's emotional detachment, developed as a coping mechanism in this unloving environment. This broken father-son relationship parallels broader social disconnections – just as Mr. Birling fails to support his son, he fails to support his workers. Eric's alcoholism and irresponsible behavior emerge partly from this lack of paternal guidance. For exams, analyze how this quote reveals the hollowness of Birling's patriarchal authority – he commands but doesn't nurture, creating resentment rather than respect. This statement directly challenges the Victorian ideal of the father as moral leader and family cornerstone. The accusation comes during Eric's confession about his relationship with Eva Smith, showing how his father's emotional unavailability contributed to Eric's self-destructive choices. This quote connects private family dysfunction with public social responsibility – failures of care at the personal level reflect and reinforce failures of care at the societal level.</div></div>
-    
-    <div class="card"><div class="character">Eric Birling</div><div class="quote">"I'm ashamed of you as well – yes both of you"</div><div>This condemnation of his parents (Act 3) shows Eric's moral awakening as he rejects their values and evasions. Priestley uses this role reversal – the son judging the parents – to emphasize the generational shift in attitudes that offers hope for social change. The repetition and clarification ("yes both of you") demonstrates Eric's newfound confidence in his moral judgment despite his lower status within the family hierarchy. Like Sheila, Eric maintains his sense of responsibility even after learning the Inspector may have been fraudulent, showing genuine character development rather than fear-based compliance. For exams, analyze how this quote represents the younger generation's rejection of inherited values and growing social conscience. Coming from the previously weak-willed, alcoholic Eric, this moral stand carries particular weight – he's found strength through accepting responsibility rather than evading it. The emotion of shame is significant – Eric redirects the shame his parents tried to make him feel onto them instead, recognizing their moral failure as more profound than his own transgressions. This statement links to the play's socialist message that moral renewal requires rejecting established hierarchies and prejudices.</div></div>
-    
-    <div class="card"><div class="character">Eric Birling</div><div class="quote">"The fact remains that I did what I did"</div><div>This straightforward acceptance of responsibility (Act 3) demonstrates Eric's moral growth and contrasts with his parents' evasions. Priestley uses this simple, declarative sentence to cut through the family's elaborate justifications and denials. The repetitive structure ("I did what I did") emphasizes the inescapable reality of his actions regardless of the Inspector's identity. Unlike his father who worries about scandal and his mother who fixates on propriety, Eric focuses on the moral essence – his behavior harmed another person. This clarity emerges despite (or perhaps because of) his marginalized position in the family as the "problem" child. For exams, analyze how this quote, alongside Sheila's similar stance, creates the play's concluding moral division between generations. Eric's statement prioritizes actions and consequences over intentions or explanations, reflecting a more direct ethical framework than his parents' situational morality. His acceptance contrasts particularly with his mother's earlier claim that "I did nothing I'm ashamed of." The simplicity of Eric's language suggests authenticity compared to his parents' more elaborate rhetoric, connecting to Priestley's association of straightforward language with moral honesty throughout the play.</div></div>
-  </div>
+      <div class="card">
+        <div class="character">The Witches</div>
+        <div class="quote">"Fair is foul, and foul is fair"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> The witches' paradoxical statement suggesting the inversion
+            of moral values and deceptive appearances.
+          </p>
+          <p>
+            <strong>Context:</strong> Sets unsettling tone, introduces theme of appearance vs
+            reality, connects to Macbeth's first line, reflects Jacobean fears of
+            witchcraft and Satanic inversion of values, foreshadows moral
+            corruption and downfall. Distinctive trochaic meter.
+          </p>
+        </div>
+      </div>
 
-  <script>
-    const allCards = [...document.querySelectorAll('.card')];
-    const container = document.getElementById('cardsContainer');
+      <div class="card">
+        <div class="character">The Witches</div>
+        <div class="quote">"None of woman born shall harm Macbeth"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> The witches' seemingly reassuring prophecy that gives
+            Macbeth false confidence but contains a fatal loophole.
+          </p>
+          <p>
+            <strong>Context:</strong> Example of equivocation (ambiguous language), explores
+            fate vs free will, relates to contemporary debate on equivocation,
+            creates dramatic irony (audience learns the truth before Macbeth),
+            shows Macbeth's dangerous overconfidence.
+          </p>
+        </div>
+      </div>
 
-    allCards.forEach(card => {
-      const quote = card.querySelector('.quote');
-      const context = card.querySelector('div:last-child');
-      context.classList.add('context');
-      card.addEventListener('click', () => {
-        context.style.display = context.style.display === 'none' ? 'block' : 'none';
-      });
-    });
+      <div class="card">
+        <div class="character">The Witches</div>
+        <div class="quote">"Double, double toil and trouble"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> The witches' rhythmic incantation while brewing a potion,
+            symbolizing chaos and the combining of evil.
+          </p>
+          <p>
+            <strong>Context:</strong> Trochaic meter distinguishes them from humans, grotesque
+            ingredients reflect Jacobean fears of witchcraft, symbolizes how evil
+            actions compound, occurs at play's midpoint intensifying supernatural
+            elements, relevant to King James I's interest in witchcraft.
+          </p>
+        </div>
+      </div>
 
-    document.getElementById('bookSelector').addEventListener('change', function () {
-      const selected = this.value;
-      container.innerHTML = '';
-      allCards.forEach(card => {
-        const book = getBook(card.querySelector('.character').textContent);
-        if (book === selected) {
-          card.style.display = 'block';
-          container.appendChild(card);
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
+      <!-- The Sign of the Four -->
+      <div class="card">
+        <div class="character">Sherlock Holmes</div>
+        <div class="quote">"My mind... rebels at stagnation."</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Holmes describes his need for constant intellectual
+            stimulation, explaining his reliance on cases and, at times, drugs
+            when bored.
+          </p>
+          <p>
+            <strong>Context:</strong> Establishes Holmes's character and complex psychology,
+            reflects late-Victorian anxieties about degeneration, shows the value
+            placed on intellectual activity and productivity, sets up the need for
+            the incoming case. Embodies scientific rationalism.
+          </p>
+        </div>
+      </div>
 
-    function getBook(character) {
-      const macbethChars = ['Macbeth', 'Lady Macbeth', 'Banquo', 'Macduff', 'The Witches'];
-      const signOfFourChars = ['Sherlock Holmes', 'Dr. Watson', 'Mary Morstan', 'Jonathan Small'];
-      const inspectorCallsChars = ['Inspector Goole', 'Arthur Birling', 'Sybil Birling', 'Sheila Birling', 'Eric Birling'];
-      if (macbethChars.includes(character)) return 'Macbeth';
-      if (signOfFourChars.includes(character)) return 'The Sign of the Four';
-      if (inspectorCallsChars.includes(character)) return 'An Inspector Calls';
-      return '';
-    }
-  </script>
-</body>
+      <div class="card">
+        <div class="character">Sherlock Holmes</div>
+        <div class="quote">"You know my methods. Apply them."</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Holmes directs Watson to use his logical and observational
+            techniques in the investigation.
+          </p>
+          <p>
+            <strong>Context:</strong> Shows Holmes as a teacher, highlights the scientific basis
+            of his detection, reflects Victorian values of self-improvement and
+            rational inquiry, allows readers to follow Watson's attempts, contrasts
+            with earlier detective methods. Reveals a rare generous side of Holmes.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Sherlock Holmes</div>
+        <div class="quote">"Detection is, or ought to be, an exact science"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Holmes's declaration of his philosophy that crime-solving
+            should be based on precise scientific methodology.
+          </p>
+          <p>
+            <strong>Context:</strong> Central theme, champions Victorian scientific progress
+            and rationalism, elevates detection to an intellectual discipline,
+            contrasts with exotic case elements, reflects positivist philosophy.
+            Shows potential blindness to non-rational human factors.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Dr. Watson</div>
+        <div class="quote">"An oasis of art in the howling desert of South London"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Watson's poetic description of Pondicherry Lodge,
+            contrasting its beauty with the perceived harshness of South London.
+          </p>
+          <p>
+            <strong>Context:</strong> Demonstrates Watson's romantic literary style vs Holmes's
+            precision, reflects Victorian attitudes toward working-class areas,
+            uses orientalist imagery paralleling the case's exotic elements,
+            provides emotional engagement for the reader, shows Watson's role as
+            interpreter.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Dr. Watson</div>
+        <div class="quote">"What was I, an army surgeon with a weak leg and a weaker banking-account?"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Watson's self-deprecating rhetorical question expressing
+            insecurity about proposing to Mary Morstan due to physical and
+            financial inadequacy.
+          </p>
+          <p>
+            <strong>Context:</strong> Humanizes Watson, explores Victorian masculine identity
+            (tied to physical/financial capability), injury symbolizes cost of
+            empire, concern about money reflects Victorian marriage expectations,
+            shows his moral character (avoiding mercenary appearance). Contrasts
+            with Holmes's detached rationality.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Dr. Watson</div>
+        <div class="quote">"You really are an automaton – a calculating machine"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Watson's criticism of Holmes's apparent lack of emotion
+            regarding Mary Morstan.
+          </p>
+          <p>
+            <strong>Context:</strong> Highlights fundamental difference between Holmes's logic
+            and Watson's emotion, creates central character dynamic, reflects
+            Victorian anxieties about industrialization dehumanizing people. Holmes's
+            response justifies his detachment for objective analysis. Watson acts as
+            a foil and bridge for the reader.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Mary Morstan</div>
+        <div class="quote">"A blonde young lady, small, dainty, well gloved"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Watson's initial physical description of Mary,
+            establishing her as an embodiment of Victorian feminine ideals.
+          </p>
+          <p>
+            <strong>Context:</strong> Portrays her as a conventional love interest, contrasts
+            with threatening elements, emphasizes Victorian propriety and modesty
+            ("well gloved"), reflects aesthetic preference for delicate femininity,
+            blonde color plays into racial typology (contrasting with Tonga), shows
+            her social position (impoverished governess). Represents domestic values
+            of empire.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Mary Morstan</div>
+        <div class="quote">"She must have been more than woman if she did not feel some uneasiness"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Watson's observation acknowledging Mary's courage but
+            reinforcing Victorian gender expectations about female sensitivity to
+            danger.
+          </p>
+          <p>
+            <strong>Context:</strong> Creates tension while maintaining femininity (fearlessness
+            would be "unwomanly"), reflects Victorian belief that nervousness was
+            feminine, allows her to participate while conforming to norms, makes her
+            relatable. Shows how Conan Doyle navigates gender ideals between Gothic
+            heroines and "New Woman."
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Mary Morstan</div>
+        <div class="quote">"She was weak and helpless, shaken in mind and nerve"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Description of Mary's reaction to the treasure's
+            disappearance, showing her physical fragility but moral strength.
+          </p>
+          <p>
+            <strong>Context:</strong> Reinforces Victorian feminine fragility expectations, but
+            her distress over Thaddeus Sholto (not the money) reveals her moral
+            superiority, allowing Watson to propose freely. Reflects Victorian class
+            values (character over wealth). Creates dramatic tension, validates
+            Watson's protective masculinity.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Jonathan Small</div>
+        <div class="quote">"A fierce, bald, bearded man"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Description of Small's physical appearance, establishing
+            him as dangerous and contrasting with Holmes and Watson.
+          </p>
+          <p>
+            <strong>Context:</strong> Marks him as working-class/threatening, uses harsh
+            descriptors, represents convergence of Victorian anxieties (dangerous
+            working class, colonial returnee, disabled), links to physiognomy,
+            missing leg symbolizes cost of imperial service. Initial impression
+            contrasts with later moral ambiguity.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Jonathan Small</div>
+        <div class="quote">"It was not murder, but self-defence"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Small's justification for his actions, framing them as
+            protecting the treasure he felt entitled to rather than cold-blooded
+            murder.
+          </p>
+          <p>
+            <strong>Context:</strong> Reveals his complex moral position (criminal/victim),
+            transforms him from simple villain via extended confession, explores
+            Victorian legal/moral distinctions (murder vs self-defense), presents
+            colonial India as morally corrupting, introduces class critique.
+            Introduces moral relativism to the detective format.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Jonathan Small</div>
+        <div class="quote">"The treasure is gone!"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Small's exclamation revealing he discarded the Agra treasure
+            in the Thames.
+          </p>
+          <p>
+            <strong>Context:</strong> Climactic twist subverting adventure ending, emphasizes
+            moral themes over material gain, shows futility of greed, treasure
+            becomes symbol of corruption. Thames location suggests morally compromised
+            imperial wealth. Frees romance plot from financial implications. Punishes
+            greed and focuses on detection process.
+          </p>
+        </div>
+      </div>
+      <!-- An Inspector Calls -->
+      <div class="card">
+        <div class="character">Inspector Goole</div>
+        <div class="quote">"We are members of one body"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> The Inspector's key statement encapsulating the play's
+            socialist message of collective responsibility.
+          </p>
+          <p>
+            <strong>Context:</strong> Metaphor of society as organism challenges individualist
+            capitalism (Birling's view), inclusive language ("we") breaks class
+            barriers, anticipates post-war welfare state/NHS (written 1945, set
+            1912), harm to one affects all (Eva Smith), Goole as Priestley's
+            mouthpiece, connects to 1945 Labour reforms and desire for equality.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Inspector Goole</div>
+        <div class="quote">"It's better to ask for the earth than to take it"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Statement defending workers' rights to demand better
+            conditions (ask) and critiquing capitalist exploitation (take).
+          </p>
+          <p>
+            <strong>Context:</strong> Counters Birling's view of strikers, validates Eva Smith's
+            action, reflects Priestley's socialist sympathies, written after WWII
+            (strengthening labor rights), contrasts Goole's plain speaking with
+            Birlings' euphemisms, distillation of ethical principles. Connects to
+            1940s union power and Labour victory.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Inspector Goole</div>
+        <div class="quote">"Fire and blood and anguish"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> The Inspector's ominous prophecy warning of violent
+            consequences if society doesn't embrace collective responsibility.
+          </p>
+          <p>
+            <strong>Context:</strong> Concludes final speech, uses biblical/apocalyptic
+            language, dramatic irony for audiences (WWI & WWII experienced), "fire"
+            evokes war/hell, makes moral message unavoidable climax, transforms Eva's
+            tragedy into social warning, structural tension leading to final revelation.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Arthur Birling</div>
+        <div class="quote">"A man has to make his own way"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Birling's declaration of his individualistic,
+            capitalist philosophy.
+          </p>
+          <p>
+            <strong>Context:</strong> Embodies the play's critique of selfish individualism,
+            gendered phrasing reflects patriarchal worldview, directly contrasts
+            Inspector's collective responsibility message, represents pre-war
+            mentality (written 1945, set 1912), led to social inequality (Eva
+            Smith's exploitation), references real historical figures showing
+            aspirational snobbery.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Arthur Birling</div>
+        <div class="quote">"Unsinkable, absolutely unsinkable"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Birling's confident, ironically incorrect assertion about
+            the Titanic.
+          </p>
+          <p>
+            <strong>Context:</strong> Dramatic irony undermines Birling's credibility immediately,
+            historical reference obvious to audience, represents his shortsightedness
+            and inability to see danger/consequences, prepares audience to question
+            his other statements (war, labor), Titanic symbolizes vulnerability of
+            Birling's reputation and social order.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Arthur Birling</div>
+        <div class="quote">"The famous younger generation who know it all"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Birling's sarcastic dismissal of youth and their
+            progressive ideas.
+          </p>
+          <p>
+            <strong>Context:</strong> Reveals his dismissive attitude towards social change,
+            establishes generational conflict (outdated vs progressive values),
+            foreshadows conflict with Eric/Sheila, resonates with post-WWII
+            tensions between generations, structural device showing resistance to
+            moral growth. Reveals his fundamental resistance to change and
+            self-reflection.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Sybil Birling</div>
+        <div class="quote">"Girls of that class"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Mrs. Birling's dismissive phrase revealing her deep-seated
+            classism and lack of empathy for working-class women.
+          </p>
+          <p>
+            <strong>Context:</strong> Dehumanizing language enables moral disengagement,
+            "that" creates linguistic distance, shows how class prejudice affects
+            her charity work (institutional power), blinds her to Eric's involvement
+            (dramatic irony), reveals intersection of class/gender hierarchies, shows
+            moral hypocrisy (different standard for Gerald), exemplifies language
+            enabling exploitation.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Sybil Birling</div>
+        <div class="quote">"I did nothing I'm ashamed of"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Mrs. Birling's defiant refusal to accept responsibility for
+            her actions concerning Eva Smith.
+          </p>
+          <p>
+            <strong>Context:</strong> Represents moral blindness of privileged classes, shows
+            lack of self-awareness/ethical reflection, contrasts with Sheila's
+            acceptance (generational divide), hypocrisy given her charity role,
+            defense based on following procedures ("did my duty"), embodies rigid
+            class attitudes Priestley critiques.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Sybil Birling</div>
+        <div class="quote">"Go and look for the father of the child. It's his responsibility."</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Mrs. Birling's unintentionally ironic statement condemning
+            the unknown father of Eva Smith's child, who turns out to be her son Eric.
+          </p>
+          <p>
+            <strong>Context:</strong> Creates dramatic tension and irony (audience knows before
+            she does), emphasizes paternal responsibility while she denies her own,
+            represents intersection of public morality and private hypocrisy,
+            intensifies critique of upper-class hypocrisy, statement boomerangs back
+            on her family, forces her to confront contradictory standards.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Sheila Birling</div>
+        <div class="quote">"But these girls aren't cheap labour – they're people"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Sheila's assertion challenging her father's dehumanizing view
+            of workers, showing her developing social conscience.
+          </p>
+          <p>
+            <strong>Context:</strong> Establishes Sheila as morally educable, directly humanizes
+            workers (counters capitalist reduction), shows recognition of individuals
+            (vs mother's "that class"), moral awakening after admitting her role,
+            represents hope for younger generations, challenges father's philosophy.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Sheila Birling</div>
+        <div class="quote">"It frightens me the way you talk"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Sheila's emotional reaction to her parents' denial and refusal
+            to accept responsibility.
+          </p>
+          <p>
+            <strong>Context:</strong> Shows her moral growth and rejection of parents' values,
+            emphasizes serious ethical implications, indicates genuine moral concern
+            (not just social embarrassment), establishes generational divide (Sheila
+            accepts responsibility), represents completed moral journey, her fear
+            links to potential broader social catastrophe (Inspector's prophecy).
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Sheila Birling</div>
+        <div class="quote">"I know I'm to blame – and I'm desperately sorry"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Sheila's early admission of responsibility and genuine
+            remorse for her actions.
+          </p>
+          <p>
+            <strong>Context:</strong> Establishes her capacity for moral growth (contrasting
+            parents), first family member to respond appropriately, willingness to
+            face uncomfortable truths sets her apart, marks beginning of transformation
+            from spoiled child, language lacks euphemisms (direct), shows how privilege
+            enabled casual cruelty. Raises expectations for others' responses.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Eric Birling</div>
+        <div class="quote">"You're not the kind of father a chap could go to"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Eric's accusation revealing the lack of emotional connection
+            and guidance in his relationship with his father.
+          </p>
+          <p>
+            <strong>Context:</strong> Reveals dysfunctional family dynamics masked by propriety,
+            formal language shows emotional detachment, broken relationship parallels
+            social disconnections (Birling failing workers), contributes to Eric's
+            alcoholism/behavior, challenges Victorian ideal of father as moral leader,
+            shows how father's unavailability contributed to Eric's choices, links
+            private dysfunction to public responsibility.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Eric Birling</div>
+        <div class="quote">"I'm ashamed of you as well – yes both of you"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Eric's condemnation of his parents, showing his moral
+            awakening and rejection of their values.
+          </p>
+          <p>
+            <strong>Context:</strong> Role reversal (son judging parents), emphasizes generational
+            shift and hope for change, repetition shows newfound confidence, maintains
+            responsibility even if Inspector fraudulent (genuine growth), redirects
+            shame onto parents, links to socialist message of rejecting established
+            hierarchies/prejudices.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="character">Eric Birling</div>
+        <div class="quote">"The fact remains that I did what I did"</div>
+        <div>
+          <p>
+            <strong>Summary:</strong> Eric's straightforward acceptance of responsibility for his
+            actions, cutting through his parents' evasions.
+          </p>
+          <p>
+            <strong>Context:</strong> Demonstrates moral growth (contrasts parents), simple
+            declarative sentence emphasizes reality of actions regardless of Inspector's
+            identity, focuses on moral essence (harm caused), clarity emerges despite
+            marginalized position, alongside Sheila creates concluding moral division,
+            prioritizes actions/consequences over intentions, simplicity suggests
+            authenticity vs parents' rhetoric.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
