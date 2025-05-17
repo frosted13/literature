@@ -19,7 +19,13 @@ allCards.forEach(card => {
 document.getElementById('bookSelector').addEventListener('change', function () {
   const selected = this.value;
   container.innerHTML = '';
-  
+
+  // ✅ Hide the status message when a book is selected
+  const statusMessage = document.querySelector('.status-message');
+  if (statusMessage) {
+    statusMessage.style.display = 'none';
+  }
+
   if (selected === '') {
     // If no book selected, don't show any cards
     allCards.forEach(card => {
@@ -38,7 +44,6 @@ document.getElementById('bookSelector').addEventListener('change', function () {
 });
 
 function getBook(character) {
-  // ... existing code ...
   const macbethChars = ['Macbeth', 'Lady Macbeth', 'Banquo', 'Macduff', 'The Witches'];
   const signOfFourChars = ['Sherlock Holmes', 'Dr. Watson', 'Mary Morstan', 'Jonathan Small'];
   const inspectorCallsChars = ['Inspector Goole', 'Arthur Birling', 'Sybil Birling', 'Sheila Birling', 'Gerald Croft', 'Eric Birling'];
@@ -55,8 +60,7 @@ window.onload = function() {
   document.querySelectorAll('.context').forEach(context => {
     context.style.display = 'none';
   });
-  
-  // Don't show any cards initially - wait for user to select a book
+
   // Clear the container just to be sure
   container.innerHTML = '';
 };
