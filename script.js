@@ -41,7 +41,7 @@ function getBook(character) {
   // ... existing code ...
   const macbethChars = ['Macbeth', 'Lady Macbeth', 'Banquo', 'Macduff', 'The Witches'];
   const signOfFourChars = ['Sherlock Holmes', 'Dr. Watson', 'Mary Morstan', 'Jonathan Small'];
-  const inspectorCallsChars = ['Inspector Goole', 'Arthur Birling', 'Sybil Birling', 'Sheila Birling', 'Eric Birling'];
+  const inspectorCallsChars = ['Inspector Goole', 'Arthur Birling', 'Sybil Birling', 'Sheila Birling', 'Gerald Croft', 'Eric Birling'];
   
   if (macbethChars.includes(character)) return 'Macbeth';
   if (signOfFourChars.includes(character)) return 'The Sign of the Four';
